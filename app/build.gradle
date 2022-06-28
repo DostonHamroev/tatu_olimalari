@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -53,6 +54,13 @@ dependencies {
     implementation 'com.airbnb.android:lottie:4.2.2'
     //circle image
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    // room database
+    def roomVersion = "2.4.1"
+    implementation "androidx.room:room-runtime:$roomVersion"
+    // To use Kotlin annotation processing tool (kapt)
+    kapt "androidx.room:room-compiler:$roomVersion"
+    //EmphasisTextView color with | textni rang bilan belgilab olish
+    //implementation 'com.athkalia.emphasis:emphasis:0.4'
 
 
 }

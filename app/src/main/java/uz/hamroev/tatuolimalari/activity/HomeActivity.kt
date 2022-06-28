@@ -11,6 +11,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import uz.hamroev.tatuolimalari.R
 import uz.hamroev.tatuolimalari.adapter.NavAdapter
+import uz.hamroev.tatuolimalari.cache.Cache
 import uz.hamroev.tatuolimalari.databinding.ActivityHomeBinding
 import uz.hamroev.tatuolimalari.model.Nav
 
@@ -32,6 +33,7 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        Cache.init(this)
 
         navController = Navigation.findNavController(this, R.id.my_nav_host_fragment)
 
